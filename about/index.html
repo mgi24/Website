@@ -1,0 +1,486 @@
+<html>
+    <head>
+        <title>My Portofolio</title>
+
+        <style>
+            .mainbg{
+                position: fixed;
+                left: -10px;
+                top: -10px;
+                width: 103%;
+                z-index: -10;
+            }
+            #header{ /*navbar atas*/
+                position: fixed;
+                left: 0px;
+                top: 0px;
+                
+                width: 100%;
+                height: 50px;
+                background-color: rgba(10, 34, 21, 1);
+                border-bottom-left-radius: 40px ;
+                border-bottom-right-radius: 40px;
+                z-index: 5;
+                text-align: center;
+            }
+            .headerbox {
+                background-color:rgba(0, 0, 0, 0);
+                margin: 10 100 0 0; /*TOP, RIGHT, BOTTOM, LEFT*/
+                width: fit-content;
+                height: fit-content;
+                display: inline-block;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: large;
+                color: whitesmoke;
+            }
+            .headerbox:hover{
+                color: red;
+                border-bottom:1px solid #f00000;
+            }
+            #wrapper{ /*nama dan foto*/
+                font-family: Arial, Helvetica, sans-serif;
+                position: relative;
+                top: 50px;
+                margin: auto;
+                width: 1000px;
+                height: auto;
+                background-color: rgba(0, 0, 0, .5);
+                border-top-left-radius: 50px;
+                box-shadow: 0 0 100px rgba(0, 0, 0, 1);
+                color: azure;
+            }
+            #wrapper h1{
+                color: azure;
+                font-size: 69px;
+            }
+            #centered{
+                text-align: center;
+            }
+            #name{
+                margin: auto;
+                width: 99%;
+                height: 297px;
+                background-color: rgba(53, 53, 53, .6);
+                border-top-left-radius: 150px;
+                border-bottom-left-radius: 150px;
+                
+                border: rgba(255, 0, 0, 1) solid;
+            
+            }
+            #nametop{
+                margin-left: 320;
+                font-size: xx-large;
+                text;
+             }
+            .float{
+                float: left;
+                opacity: 1;
+            }
+            .floatr{
+                float: right;
+            }
+            #about{
+                margin: 50 0 0 0 ;
+                height: 1400;
+                width: 100%;
+                border-top-left-radius: 50px;
+                border-top-right-radius: 50px ;
+                background-color:rgba(0, 0, 0, .3);
+                
+            }
+            .aboutimg{
+                opacity: 1;
+                position: absolute;
+                margin-top: -40;
+            }
+            #box{/*informasi detail*/
+                position: relative;
+                top: 30px;
+                padding:20 20 ;
+                width: 50%;
+                margin: 0 30 100 30; /*TOP, RIGHT, BOTTOM, LEFT*/
+                height: auto;
+                background: rgba(0, 0, 0, .3);
+                border: 2px solid red;
+                border-bottom-left-radius: 20px;
+                border-bottom-right-radius: 20px;
+                border-top-right-radius: 20px;
+                border-top-left-radius: 20px ;
+                font-size: large;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                color: white;
+                display: inline-block;
+                text-align: center;
+            }
+            #box:hover{
+                box-shadow: 0 0 50px rgb(255, 0, 0);
+            }
+            #minibox{
+                display: inline-block;
+                position: relative;
+                top: 30px;
+                padding:20 20 ;
+                width: fit-content;
+                height: auto;
+                margin: 0 30 20 30; /*TOP, RIGHT, BOTTOM, LEFT*/
+                background: rgba(0, 0, 0, .3);
+                border: 2px solid red;
+                border-bottom-left-radius: 20px;
+                border-bottom-right-radius: 20px;
+                border-top-right-radius: 20px;
+                border-top-left-radius: 20px ;
+                font-size: large;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                color: white;
+                text-align: center;
+                box-sizing: border-box;
+            }
+            #minibox:hover{
+                box-shadow: 0 0 50px rgb(255, 0, 0);
+            }
+            #type{
+                font-family: Verdana;
+                padding: 3 0;
+                width: 100%;
+                text-align: center;
+                border-top-left-radius: 50px;
+                border-top-right-radius: 50px ;
+                background-color: rgba(53, 53, 53, .6);
+                margin: 20 0  0  0; /*TOP, RIGHT, BOTTOM, LEFT*/
+            }
+            #middle{
+                position: relative;
+                left: 0;
+                margin: 50 0 0 -8; /*TOP, RIGHT, BOTTOM, LEFT*/
+                width: 101%;
+                height: auto;
+                color: white ;
+                background-color: rgb(87, 87, 87);
+                border-top-right-radius: 50px;
+                border-top-left-radius:50px ;
+                text-align: center;
+                z-index: 10;
+            }
+            #middle h1{
+                text-shadow: 0 0 100px rgba(0, 0, 0, 1);
+            }
+            #middletype{
+                font-family: Verdana;
+                padding: 1px 0;
+                width: 100%;
+                text-align: center;
+                border-top-left-radius: 50px;
+                border-top-right-radius: 50px ;
+                background-color: rgba(53, 53, 53, .6);
+                margin: auto;
+            }
+            #powered{
+                background-color: rgb(67, 67, 67);
+                height: auto;
+            }
+            #poweredbox{
+                display: inline-block;
+                position: relative;
+                top: 30px;
+                padding:20 20 ;
+                width: fit-content;
+                height: auto;
+                margin: 0 30 50 30; /*TOP, RIGHT, BOTTOM, LEFT*/
+                background: rgba(0, 0, 0, .3);
+                border: 2px solid red;
+                border-bottom-left-radius: 20px;
+                border-bottom-right-radius: 20px;
+                border-top-right-radius: 20px;
+                border-top-left-radius: 20px ;
+                font-size: large;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                color: white;
+                text-align: center;
+                box-sizing: border-box;
+            }
+            #poweredbox:hover{box-shadow: 0 0 50px rgb(255, 0, 0);}
+            #partner h1{
+                font-family: Verdana;
+            }
+            #mywork{
+                background-color: rgb(51, 51, 51);
+                padding: 1px;
+            }
+            #myworkbox{
+                display: inline-block;
+                position: relative;
+                top: 30px;
+                padding:20 20 ;
+                width: 80%;
+                height: 700px;
+                margin: 0 30 50 30; /*TOP, RIGHT, BOTTOM, LEFT*/
+                background: rgba(0, 0, 0, .3);
+                border: 2px solid red;
+                border-bottom-left-radius: 20px;
+                border-bottom-right-radius: 20px;
+                border-top-right-radius: 20px;
+                border-top-left-radius: 20px ;
+                font-size: large;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                color: white;
+                text-align: center;
+                box-sizing: border-box; 
+            }
+            #myworkbox:hover{
+                box-shadow: 0 0 50px rgb(255, 0, 0);
+            }
+            #mywork iframe{
+                width: 100%;
+                height: 100%;
+            }
+            #partner{
+                background-color: rgb(31, 31, 31);
+                padding: 1px;
+                
+            }
+            #partner form {
+                width: 600px;
+                display: inline-block;
+            }
+            #partner form input, #partner form textarea, #partner form input[type=submit]{
+                margin: 0 0 5 0 ;
+                width: 100%;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: large;
+                padding: 20px;
+                border-top-right-radius: 10px;
+                border-top-left-radius: 10px;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+                border:1px solid red;
+            }
+            
+            #partner form input[type=submit]{
+                color: white;
+                background-color: rgb(32, 32, 32);
+            }
+            #partner form input[type=submit]:hover{
+                background-color: rgb(59, 59, 59);
+                box-shadow: 0 0 50px rgb(255, 0, 0);
+            }
+            .getintouchsize{
+                min-height: 200px;
+                max-height: 200px;
+            }
+            .poweredsize{
+                height: 200px;
+            }
+            .formbox{
+                margin:0 100 50 50; /*TOP, RIGHT, BOTTOM, LEFT*/
+                width: 200px;
+                display: inline-block;
+            }
+            #footer{ /*navbar bawah*/
+                margin: 0 0 -10 -10 ;/*TOP, RIGHT, BOTTOM, LEFT*/
+                left: 0px;
+                top: 0px;
+                width: 101%;
+                height: 50px;
+                background-color: rgba(0, 0, 0, 1);
+                color: rgba(255, 255, 255, 0.3);
+                text-align: center;
+            }
+            /*1000px<*/
+            @media only screen and (max-width: 1000px){
+                #middle{
+                    -webkit-transition: width 1s ease-in-out;
+                    -o-transition: width 1s ease-in-out;
+                    -moz-transition: width 1s ease-in-out;
+                    transition: width 1s ease-in-out;
+                    width: 105%;
+                }
+                .formbox{
+                    
+                    margin-top: 50px;
+                    margin-left: 40%;
+                    margin-bottom: 50px;
+                    align-self: center;
+                    display: block;
+                    
+                }
+                #footer{
+                    width: 105%;
+                }
+                
+            }
+        </style>
+    </head>
+    <body>
+        <img class="mainbg" src="https://github.com/mgi301/Site/raw/main/mountain%20small.png" alt="bg.png">
+        <div id="header">
+            <a href="https://mgi301.github.io/mainpage"><div class="headerbox">Main Website</div> </a>
+            <a href="#middle"><div class="headerbox">Contact</div></a>
+            <a href="#mywork"><div class="headerbox">My Work</div></a>
+            <a href="#partner"><div class="headerbox">Sign up!</div></a>
+                            
+        </div>
+        <div id="wrapper">
+            <div id="name">
+                <img class="float" width="300" src="https://raw.githubusercontent.com/mgi301/Site/main/me2.png" alt="myface">
+                <div id="nametop">
+                    <H1>Ahmad Mishbahuddin</H1>
+                    <b>Student | Content Creator</b>
+                </div>
+            </div>
+            <div id="about">
+                <div id="type">
+                    <h3>TENTANG SAYA</h3>
+                </div>
+                <div id="box"> 
+                    " Saya suka mendorong segala sesuatu sampai batas, <br>
+                    baik efisiensi, kemampuan, maupun kapabilitas. <br>
+                    Menyukai tantangan dan hal baru utamanya di dunia komputer. <br>
+                    Tidak pernah puas akan hal yang sudah ada dan ingin selalu menaikkan standar." <br>
+                </div>
+                    <img class="aboutimg" width="300px" src="https://raw.githubusercontent.com/mgi301/Site/main/161-1613436_speedometer-png.png" alt="speedmeter">
+                <div id="type">
+                    <h3>SKILL</h3>
+                </div>
+                <div id="centered">
+                    <div id="minibox">
+                        Video editing (Adobe Premiere) <br>
+                        <img width="50px" src="https://logodownload.org/wp-content/uploads/2019/10/adobe-premiere-pro-logo.png" alt="star"><br>
+                        <img width="40px" src="https://pngimg.com/uploads/star/star_PNG41481.png" alt="star">
+                        <img width="40px" src="https://pngimg.com/uploads/star/star_PNG41481.png" alt="star">
+                        <img width="40px" src="https://pngimg.com/uploads/star/star_PNG41481.png" alt="star">
+                        <img width="40px" src="https://pngimg.com/uploads/star/star_PNG41481.png" alt="star">
+                        <img width="40px" src="https://pngimg.com/uploads/star/star_PNG41481.png" alt="star">
+                    </div>
+                    <div id="minibox">
+                        Motion Graphics (Adobe After Effect) <br>
+                        <img width="50px" src="https://raw.githubusercontent.com/mgi301/Site/main/after-effects-logo-png.png" alt="AE"><br>
+                        <img width="40px" src="https://pngimg.com/uploads/star/star_PNG41481.png" alt="star">
+                        <img width="40px" src="https://pngimg.com/uploads/star/star_PNG41481.png" alt="star">
+                        <img width="40px" src="https://pngimg.com/uploads/star/star_PNG41481.png" alt="star">
+                    </div>
+                    <div id="minibox">
+                        Office <br>
+                        (Microsoft Office Word, Excel, Powerpoint) <br>
+                        <img width="50px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Microsoft_Office_logo_%282013%E2%80%932019%29.svg/220px-Microsoft_Office_logo_%282013%E2%80%932019%29.svg.png" alt="office"><br>
+                        <img width="40px" src="https://pngimg.com/uploads/star/star_PNG41481.png" alt="star">
+                        <img width="40px" src="https://pngimg.com/uploads/star/star_PNG41481.png" alt="star">
+                        <img width="40px" src="https://pngimg.com/uploads/star/star_PNG41481.png" alt="star">
+                        <img width="40px" src="https://pngimg.com/uploads/star/star_PNG41481.png" alt="star">
+                    </div>
+                    <div id="minibox">
+                        Professional PC Builder <br>
+                        <img width="80px" src="https://raw.githubusercontent.com/mgi301/Site/main/PCMR.png" alt="PCMR"><br>
+                        <img width="40px" src="https://pngimg.com/uploads/star/star_PNG41481.png" alt="star">
+                        <img width="40px" src="https://pngimg.com/uploads/star/star_PNG41481.png" alt="star">
+                        <img width="40px" src="https://pngimg.com/uploads/star/star_PNG41481.png" alt="star">
+                        <img width="40px" src="https://pngimg.com/uploads/star/star_PNG41481.png" alt="star">
+                        <img width="40px" src="https://pngimg.com/uploads/star/star_PNG41481.png" alt="star">
+                    </div>
+                    <div id="minibox">
+                        Network Setup <br>
+                        <img width="80px" src="https://raw.githubusercontent.com/mgi301/Site/main/network.png" alt="PCMR"><br>
+                        <img width="40px" src="https://pngimg.com/uploads/star/star_PNG41481.png" alt="star">
+                        <img width="40px" src="https://pngimg.com/uploads/star/star_PNG41481.png" alt="star">
+                    </div>
+                    <div id="minibox">
+                        Elektronika <br>
+                        <img width="80px" src="https://raw.githubusercontent.com/mgi301/Site/main/electricity.png" alt="PCMR"><br>
+                        <img width="40px" src="https://pngimg.com/uploads/star/star_PNG41481.png" alt="star">
+                    </div>
+                    <div id="minibox">
+                        Coding <br>
+                        (Python, Html) <br>
+                        <img width=60px" src="https://raw.githubusercontent.com/mgi301/Site/main/koding.png" alt="PCMR"><br>
+                        <img width="40px" src="https://pngimg.com/uploads/star/star_PNG41481.png" alt="star">
+                    </div>
+                </div>
+                <div id="type">
+                    <h3>PENDIDIKAN</h3>
+                </div>
+                <div id="centered">
+                    <div id="minibox">
+                        <b>SMP NEGERI 3 PATI </b> <br>
+                        Alumni 2017
+                    </div>
+                    <div id="minibox">
+                        <b> SMA NEGERI 1 PATI </b><br>
+                        alumni 2020
+                    </div>
+                    <div id="minibox">
+                       <b> Universitas Negeri Sebelas Maret <br>
+                        Pendidikan Teknik Informatika dan Komputer </b><br>
+                        2020-Sekarang
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="middle">
+            <div id="middletype">
+                <h1>Get In touch With Me!</h1>
+            </div>
+                <a href="https://www.instagram.com/ahmad_mishbahuddin/" target="_blank">
+                <div id="minibox">
+                   <b> Instagram </b><br>
+                    <img class="getintouchsize" src="https://raw.githubusercontent.com/mgi301/Site/main/instagram.png" alt="ig">
+                </div></a>
+                <a href="https://www.facebook.com/MishbahGI/" target="blank">
+                <div id="minibox">
+                    <b> Facebook </b><br>
+                     <img class="getintouchsize" src="https://raw.githubusercontent.com/mgi301/Site/main/facebook.png" alt="fb">
+                </div></a>
+                <a href="https://api.whatsapp.com/send/?phone=6283848052406" target="_blank">
+                <div id="minibox">
+                    <b> WhatsApp </b><br>
+                     <img class="getintouchsize" src="https://raw.githubusercontent.com/mgi301/Site/main/wa.png" alt="whatsapp">
+                </div>
+                <a href="https://gmail.com" target="_blank">
+                <div id="minibox">
+                    <b> Email </b><br>
+                     <img class="getintouchsize" src="https://i1.wp.com/www.point-star.com/wp-content/uploads/2020/09/logo-gmail-png-gmail-icon-download-png-and-vector-1.png" alt="gmail">
+                </div></a>
+                <div id="type">
+                    <h1>Powered By</h1>
+                </div>
+                <div id="powered">
+                    <a href="https://www.aorus.com/" target="_blank">
+                    <div id="poweredbox">
+                        <b>Gigabyte</b><br>
+                        <img class="poweredsize" src="https://raw.githubusercontent.com/mgi301/Site/main/aorus.png" alt="aorus">
+                    </div></a>
+                    <a href="https://www.nvidia.com/en-us/" target="_blank">
+                    <div id="poweredbox">
+                        <b>Nvidia</b><br>
+                        <img class="poweredsize" src="https://upload.wikimedia.org/wikipedia/sco/thumb/2/21/Nvidia_logo.svg/351px-Nvidia_logo.svg.png" alt="nv">
+                    </div></a>
+                    <a href="https://www.youtube.com/c/MGI301/featured">
+                    <div id="poweredbox">
+                        <b>Youtube</b><br>
+                        <img class="poweredsize" src="https://raw.githubusercontent.com/mgi301/Site/main/yt.png" alt="yt">
+                    </div></a>
+
+                </div>
+                <div id="mywork">
+                    <h1>Checkout My Work!</h1>
+                    <div id="myworkbox">
+                        <iframe src="https://www.youtube.com/embed/uZIAyGdLdqk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                        </iframe>
+                    </div>
+                    
+                </div>
+                <div id="partner">
+                    <h1>Become Our Partner Now!</h1>
+                    <h3>Only 1 Minute to sign! <br></h3>
+                    <img class="formbox" width="200px" src="https://raw.githubusercontent.com/mgi301/Site/main/partner.png" alt="">
+                    <form action="">
+                        <input type="text" placeholder="Name"> <br>
+                        <input type="text" placeholder="Email"> <br>
+                        <textarea cols="30" rows="5" placeholder="Tell me your offer!"></textarea> <br>
+                        <input type="submit" value="Send">
+                    </form>
+                </div>
+        </div>
+        <div id="footer">©MGI Ahmad Mishbahuddin <br>
+            2021
+        </div>
+    </body>
+</html>

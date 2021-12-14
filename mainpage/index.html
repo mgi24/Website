@@ -1,0 +1,1195 @@
+<html>
+    <head>
+        <title>MGI Official</title>
+        
+        <script type="text/javascript" src="jquery.js"></script>
+        <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="index.css">
+        <link rel="stylesheet" type="text/css" href="js/jquery-ui.min.css">
+
+
+        <style>
+            html{
+                scroll-behavior: smooth; /*PENTING*/
+            }
+            .mainbg{ /*PENTING*/
+                position: fixed;
+                left: -10px;
+                top: -10px;
+                width: 103%;
+                z-index: -10;
+            }
+            #header{ /*navbar atas*/
+                position: fixed;
+                left: 0px;
+                top: 0px;
+                
+                width: 100%;
+                height: 50px;
+                background-color: rgba(10, 34, 21, 1);
+                border-bottom-left-radius: 40px ;
+                border-bottom-right-radius: 40px;
+                z-index: 5;
+                text-align: center;
+            }
+            .headerbox { /*PENTING*/
+                background-color:rgba(0, 0, 0, 0);
+                margin: 10 100 0 0; /*TOP, RIGHT, BOTTOM, LEFT*/
+                width: fit-content;
+                height: fit-content;
+                display: inline-block;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: large;
+                color: whitesmoke;
+            }
+            .headerbox:hover{ /*PENTING*/
+                color: red;
+                border-bottom:1px solid #f00000;
+            }
+            #cover{ /*PENTING*/
+                position: relative;
+                top: 60px;
+                margin: auto;
+                width: 100%;
+                height: fit-content;
+                background-color: rgba(0, 0, 0, .8);
+                border-top-left-radius: 50px;
+                border-top-right-radius: 50px;
+                box-shadow: 0 0 100px rgba(0, 0, 0, 1);
+                color: azure;
+                overflow: hidden;
+                margin: 5 0 0 0 ;
+            }
+            #cover:hover{
+                box-shadow: 0 0 50px rgb(255, 0, 0);
+            }
+            .logo{
+                position: relative;
+                float: right;
+                z-index: 1;
+                width: 15%;
+                margin-right: 5%;
+                top: -80px;
+            
+            }
+            #wrapper{ /*nama dan foto*/
+                font-family: Arial, Helvetica, sans-serif;
+                position: relative;
+                top: 80px;
+                width: 100%;
+                height: auto;
+                background-color: rgba(0, 0, 0, .8);
+                border-top-left-radius: 50px;
+                border-top-right-radius: 50px;
+                box-shadow: 0 0 100px rgba(0, 0, 0, 1);
+                color: azure;
+                
+                margin:  400 0 0 ; /*TOP, RIGHT, BOTTOM, LEFT*/
+            }
+            #wrapper:hover{
+                box-shadow: 0 0 50px rgb(255, 0, 0);
+            }
+            .cover{
+                position: relative;
+                
+                width: 110%;
+                height: auto;
+                border: 2px solid red;
+            }
+            .cover:hover{
+                box-shadow: 0 0 50px rgb(255, 0, 0);
+            }
+            #wrapper h1{
+                color: azure;
+                font-size: 69px;
+            }
+            #centered{
+                text-align: center;
+            }
+            #enjoy{
+                width: 100%;
+                
+                text-align: center;
+                font-size: 100px;
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                
+                margin: 600 0 0 0 ; /*TOP, RIGHT, BOTTOM, LEFT*/
+            }
+            #middle{
+                position: relative;
+                left: 0;
+                margin: 50 0 0 -8; /*TOP, RIGHT, BOTTOM, LEFT*/
+                width: 101%;
+                height: auto;
+                color: white ;
+                background-color: rgb(87, 87, 87);
+                border-top-right-radius: 50px;
+                border-top-left-radius:50px ;
+                text-align: center;
+                z-index: 10;
+            }
+            #contactpic{
+                display: inline-block;
+                position: relative;
+                top: 30px;
+                padding:20 20 ;
+                width: fit-content;
+                height: auto;
+                border-bottom-left-radius: 20px;
+                border-bottom-right-radius: 20px;
+                border-top-right-radius: 20px;
+                border-top-left-radius: 20px ;
+                font-size: large;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                color: white;
+                background-color: rgba(0, 0, 0, .3);
+                margin: 0 20 50 50; /*TOP, RIGHT, BOTTOM, LEFT*/
+                box-sizing: border-box;
+            }
+            .contactfont{
+                float: right;
+                margin: 15 0 0 10; /*TOP, RIGHT, BOTTOM, LEFT*/
+            }
+            #contactpic:hover{
+                box-shadow: 0 0 50px rgb(255, 0, 0);
+            }
+            .getintouchsize{
+                min-height: 50px;
+                max-height: 50px;
+            }
+            #socials{
+                background-color: rgb(51, 51, 51);
+                padding: 1px;
+                margin-top: 100px;
+                height: auto;
+                margin: auto;
+            }
+            #about{
+                margin: 50 0 0 0 ;
+                height: 200px;
+                width: 100%;
+                border-top-left-radius: 50px;
+                border-top-right-radius: 50px ;
+            }
+
+
+
+
+
+
+
+
+
+/*APPROVED PENTING!!!!*/
+
+
+
+
+
+
+
+
+
+
+
+
+            #name{
+                margin: auto;
+                width: 99%;
+                height: 297px;
+                background-color: rgba(53, 53, 53, .6);
+                border-top-left-radius: 150px;
+                border-bottom-left-radius: 150px;
+                border: rgba(255, 0, 0, 1) solid;
+            }
+            #nametop{
+                margin-left: 320;
+                font-size: xx-large;
+                text;
+             }
+            .float{
+                float: left;
+                opacity: 1;
+            }
+            .floatr{
+                float: right;
+            }
+            
+                
+                
+            }
+            #box{/*informasi detail*/
+                position: relative;
+                top: 30px;
+                padding:20 20 ;
+                width: 50%;
+                margin: 0 30 100 30; /*TOP, RIGHT, BOTTOM, LEFT*/
+                height: auto;
+                background: rgba(0, 0, 0, .3);
+                border: 2px solid red;
+                border-bottom-left-radius: 20px;
+                border-bottom-right-radius: 20px;
+                border-top-right-radius: 20px;
+                border-top-left-radius: 20px ;
+                font-size: large;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                color: white;
+                display: inline-block;
+                text-align: center;
+            }
+            #box:hover{
+                box-shadow: 0 0 50px rgb(255, 0, 0);
+            }
+            #minibox{
+                display: inline-block;
+                position: relative;
+                top: 30px;
+                padding:20 20 ;
+                width: fit-content;
+                height: auto;
+                margin: 0 30 20 30; /*TOP, RIGHT, BOTTOM, LEFT*/
+                background: rgba(0, 0, 0, .3);
+                border: 2px solid red;
+                border-bottom-left-radius: 20px;
+                border-bottom-right-radius: 20px;
+                border-top-right-radius: 20px;
+                border-top-left-radius: 20px ;
+                font-size: large;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                color: white;
+                text-align: center;
+                box-sizing: border-box;
+            }
+            #minibox:hover{
+                box-shadow: 0 0 50px rgb(255, 0, 0);
+            }
+            #type{
+                font-family: Verdana;
+                padding: 3 0;
+                width: 100%;
+                text-align: center;
+                border-top-left-radius: 50px;
+                border-top-right-radius: 50px ;
+                background-color: rgba(53, 53, 53, .6);
+                margin: 20 0  0  0; /*TOP, RIGHT, BOTTOM, LEFT*/
+            }
+            
+            #middle h1{
+                text-shadow: 0 0 100px rgba(0, 0, 0, 1);
+            }
+            #middletype{
+                font-family: Verdana;
+                padding: 1px 0;
+                width: 100%;
+                text-align: center;
+                border-top-left-radius: 50px;
+                border-top-right-radius: 50px ;
+                margin: auto;
+                
+            }
+            #powered{
+                background-color: rgb(67, 67, 67);
+                height: auto;
+            }
+            #poweredbox{
+                display: inline-block;
+                position: relative;
+                top: 30px;
+                padding:20 20 ;
+                width: fit-content;
+                height: auto;
+                margin: 0 30 50 30; /*TOP, RIGHT, BOTTOM, LEFT*/
+                background: rgba(0, 0, 0, .3);
+                border: 2px solid red;
+                border-bottom-left-radius: 20px;
+                border-bottom-right-radius: 20px;
+                border-top-right-radius: 20px;
+                border-top-left-radius: 20px ;
+                font-size: large;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                color: white;
+                text-align: center;
+                box-sizing: border-box;
+            }
+            #weoperatenew{
+                font-size: 1000px;
+                font-family: Arial, Helvetica, sans-serif;
+                display: inline-block;
+                position: relative;
+                top: 30px;
+                padding:20 20 ;
+                width: fit-content;
+                height: auto;
+                margin: 0 30 10 30; /*TOP, RIGHT, BOTTOM, LEFT*/
+                background: rgba(0, 0, 0, .3);
+                border: 2px solid red;
+                border-bottom-left-radius: 20px;
+                border-bottom-right-radius: 20px;
+                border-top-right-radius: 20px;
+                border-top-left-radius: 20px ;
+                font-size: large;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                color: white;
+                text-align: center;
+                box-sizing: border-box;
+            }
+            #weoperate{
+                font-size: xx-large;
+                font-family: Arial, Helvetica, sans-serif;
+                display: inline-block;
+                position: relative;
+                top: 30px;
+                padding:20 20 ;
+                width: fit-content;
+                height: auto;
+                margin: 0 30 10 30; /*TOP, RIGHT, BOTTOM, LEFT*/
+                background: rgba(0, 0, 0, .3);
+                border: 2px solid red;
+                border-bottom-left-radius: 20px;
+                border-bottom-right-radius: 20px;
+                border-top-right-radius: 20px;
+                border-top-left-radius: 20px ;
+                font-size: large;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                color: white;
+                text-align: center;
+                box-sizing: border-box;
+            }
+            #poweredbox:hover{box-shadow: 0 0 50px rgb(255, 0, 0);}
+            #partner h1{
+                font-family: Verdana;
+            }
+            
+            #myworkbox{
+                display: inline-block;
+                position: relative;
+                top: 30px;
+                padding:20 20 ;
+                width: 80%;
+                height: 700px;
+                margin: 0 30 50 30; /*TOP, RIGHT, BOTTOM, LEFT*/
+                background: rgba(0, 0, 0, .3);
+                border: 2px solid red;
+                border-bottom-left-radius: 20px;
+                border-bottom-right-radius: 20px;
+                border-top-right-radius: 20px;
+                border-top-left-radius: 20px ;
+                font-size: large;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                color: white;
+                text-align: center;
+                box-sizing: border-box; 
+            }
+            #myworkbox:hover{
+                box-shadow: 0 0 50px rgb(255, 0, 0);
+            }
+            #mywork iframe{
+                width: 100%;
+                height: 100%;
+            }
+            #partner{
+                background-color: rgb(31, 31, 31);
+                padding: 1px;
+                
+            }
+            #partner form {
+                width: 600px;
+                display: inline-block;
+            }
+            #partner form input, #partner form textarea, #partner form input[type=button]{
+                margin: 0 0 5 0 ;
+                width: 100%;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: large;
+                padding: 20px;
+                border-top-right-radius: 10px;
+                border-top-left-radius: 10px;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+                border:1px solid red;
+            }
+            
+            #partner form input[type=button]{
+                color: white;
+                background-color: rgb(32, 32, 32);
+            }
+            #partner form input[type=button]:hover{
+                background-color: rgb(59, 59, 59);
+                box-shadow: 0 0 50px rgb(255, 0, 0);
+            }
+            
+            .poweredsize{
+                height: 200px;
+            }
+            .formbox{
+                margin:0 100 50 50; /*TOP, RIGHT, BOTTOM, LEFT*/
+                width: 200px;
+                display: inline-block;
+            }
+            #footer{ /*navbar bawah*/
+                margin: 0 0 -10 -10 ;/*TOP, RIGHT, BOTTOM, LEFT cmon!!!*/
+                left: 0px;
+                top: 0px;
+                width: 101%;
+                height: 50px;
+                background-color: rgba(0, 0, 0, 1);
+                color: rgba(255, 255, 255, 0.3);
+                text-align: center;
+            }
+            #popup-container iframe{
+                float: left;
+                                text-align: center;
+                                width: 100%;
+                                height: 100%;
+                                
+                            }
+            
+                            #container{
+                                position: relative;
+                                top: 50;
+                                text-align: center;
+                                width: 90%;
+                                height: 700px;
+                                background-color: rgba(0, 0, 0, 0);
+                                
+
+                            }
+            
+            /*1000px<*/
+            @media only screen and (max-width: 1000px){
+                #middle{
+                    -webkit-transition: width 1s ease-in-out;
+                    -o-transition: width 1s ease-in-out;
+                    -moz-transition: width 1s ease-in-out;
+                    transition: width 1s ease-in-out;
+                    width: 105%;
+                }
+                #wrapper{
+                    -webkit-transition: width 1s ease-in-out;
+                    -o-transition: width 1s ease-in-out;
+                    -moz-transition: width 1s ease-in-out;
+                    transition: width 1s ease-in-out;
+                    width: 104%;
+                }
+                .formbox{
+                    
+                    margin-top: 50px;
+                    margin-left: 40%;
+                    margin-bottom: 50px;
+                    align-self: center;
+                    display: block;
+                    
+                }
+                #cover{
+                    width: 104%;
+                }
+                #footer{
+                    width: 105%;
+                }
+                #container{
+                    width: 100%;
+                }
+                
+                
+            }
+
+            #menu {
+                width: 80%;
+                background: none;
+                margin: 0 auto;
+                border: none;
+                padding-top: 45px;
+            }
+
+            #menu ul {
+                background: none;
+                border: none;
+                border-bottom: 2px solid white;
+            }
+
+            #menu li {
+                margin-top: 20px;
+                background: rgba(0,0,0, .8);
+                margin-left: 15px;             
+                border-top-left-radius: 15px;
+                border-top-right-radius: 15px;
+            }
+
+            #menu li a {
+                padding: 15px 27px;
+                color: white;
+
+            }
+
+            #menu li a:hover {
+                background: rgba(255,255,255, .8);
+                color: black;                
+                border-top-left-radius: 15px;
+                border-top-right-radius: 15px;
+            }
+
+            #menu li a:focus {
+                background: rgba(255,255,255, .8);
+                color: black;                
+                border-top-left-radius: 15px;
+                border-top-right-radius: 15px;
+            }
+
+            #menu img {
+                padding: 15px 35px;
+            }
+            
+            p.jdl {
+                text-decoration: none;
+                color:rgb(255, 255, 255);
+                font-size: 12px;
+                text-align: center;
+            }
+
+
+
+
+
+
+
+            
+
+        </style>
+
+
+    </head>
+    <body>
+        <img class="mainbg" src="https://github.com/mgi301/Site/raw/main/car.png" alt="bg.png"> 
+        <div id="header">
+            <a href="https://mgi301.github.io/about"><div class="headerbox">About Me</div> </a>
+            <a href="#wrapper"><div class="headerbox">My Content</div></a>
+            <a href="#socials"><div class="headerbox">Social Media</div></a>
+            <a href="#partner"><div class="headerbox">Get In Touch!</div></a>
+                            
+        </div>
+        <div id="cover">
+            <img class="cover" src="https://raw.githubusercontent.com/mgi301/Site/main/cover.png" alt="cover">
+        </div>
+        <img class="logo" src="https://raw.githubusercontent.com/mgi301/Site/main/logo.png" alt="logo">
+
+        <div id="enjoy"><b> ENJOY._</b></div>
+        
+        <div id="popup-container"><center>
+            <div id="container">
+            <div id="close">
+                <img width="50" src="https://raw.githubusercontent.com/mgi301/mgi301.github.io/main/mainpage/close.png" alt="close"><br><br><br>
+            </div>
+                <div class="video11">
+                    <iframe src="https://www.youtube.com/embed/9hRf9VP9pn4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video21">
+                    <iframe src="https://www.youtube.com/embed/YKVxX9EMnPs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video31">
+                    <iframe src="https://www.youtube.com/embed/bZDC-omvn54" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video41">
+                    <iframe src="https://www.youtube.com/embed/KCJ0jyr182E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video12">
+                    <iframe src="https://www.youtube.com/embed/8VKj78vtc-U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video22">
+                    <iframe src="https://www.youtube.com/embed/-gKWP8jdYsk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video32">
+                    <iframe src="https://www.youtube.com/embed/Go2RFcOYvQc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video42">
+                    <iframe src="https://www.youtube.com/embed/NLeqasxc_fo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video13">
+                    <iframe src="https://www.youtube.com/embed/iMbWtPlASco" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video23">
+                    <iframe src="https://www.youtube.com/embed/pHCOWREFYwE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video331">
+                    <iframe src="https://www.youtube.com/embed/WeP5VQDEyyc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video43">
+                    <iframe src="https://www.youtube.com/embed/J83mHoVEi48" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video14">
+                    <iframe src="https://www.youtube.com/embed/9xciCcjbkf8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video24">
+                    <iframe src="https://www.youtube.com/embed/JnYBGpvOI-I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video34">
+                    <iframe src="https://www.youtube.com/embed/7hfCuC1kt54" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video44">
+                    <iframe src="https://www.youtube.com/embed/Y0n3GYc6lno" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video15">
+                    <iframe src="https://www.youtube.com/embed/mlbKJAOKtQE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video25">
+                    <iframe src="https://www.youtube.com/embed/gcpqmTE4maI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video35">
+                    <iframe src="https://www.youtube.com/embed/EfImhsx3EWA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video45">
+                    <iframe src="https://www.youtube.com/embed/T3mdW0bzH9M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            
+            </div></div></center>
+        <div id="wrapper">
+            
+                <div id="menu">
+            <ul>
+                <li><a href="#menu-1">REMIX</a></li>
+                <li><a href="#menu-2">SHORT</a></li>
+                <li><a href="#menu-3">SPEAKER</a></li>
+                <li><a href="#menu-4">10-MINUTE</a></li>
+                <li><a href="#menu-5">MUSIC</a></li>
+            </ul>
+       
+            <script>
+                $(document).ready(function(){
+                    $("#menu").tabs();
+                });
+      
+            </script>
+                        <style>
+                            #popup-container{
+                                position: fixed;
+        
+                                top: 0;
+                                z-index: 100;
+                                left: 0;
+                                right: 0;
+                                width: 100%;
+                                height: 100%;
+                                background-color: rgba(0, 0, 0, .4);
+                                border:1px solid red;
+                                display: none;
+                                
+                            }
+                            
+                            
+                            
+                            #close{
+                                margin: 0 0 0 0 ;/*TOP, RIGHT, BOTTOM, LEFT*/
+                                position: relative;
+                                float: left;
+                                cursor: pointer;
+                                margin;
+                            }
+                            .video11{
+                                display: none;
+                            }
+                            .video21{
+                                display: none;
+                            }
+                            .video31{
+                                display: none;
+                            }
+                            .video41{
+                                display: none;
+                            }
+                            .video12{
+                                display: none;
+                            }
+                            .video22{
+                                display: none;
+                            }
+                            .video32{
+                                display: none;
+                            }
+                            .video42{
+                                display: none;
+                            }
+                            .video13{
+                                display: none;
+                            }
+                            .video23{
+                                display: none;
+                            }
+                            .video331{
+                                display: none;
+                            }
+                            .video43{
+                                display: none;
+                            }
+                            .video14{
+                                display: none;
+                            }
+                            .video24{
+                                display: none;
+                            }
+                            .video34{
+                                display: none;
+                            }
+                            .video44{
+                                display: none;
+                            }
+                            .video15{
+                                display: none;
+                            }
+                            .video25{
+                                display: none;
+                            }
+                            .video35{
+                                display: none;
+                            }
+                            .video45{
+                                display: none;
+                            }
+                        </style>
+                        
+        
+
+
+
+
+
+                        
+                        <script>
+                            $(document).ready(function(){
+                                $('#popup').click(function(){
+                                    $('#popup-container').show()
+                                })
+                                $('#close').click(function(){
+                                    $('#popup-container').hide()
+                                })
+                            })
+
+                            $(document).ready(function(){
+                                $('.frame11').click(function(){
+                                    $('#popup-container').show()
+                                    $('.video11').show()
+                                })
+                                $('#close').click(function(){
+                                    $('#popup-container').hide()
+                                    $('.video11').hide()
+                                })
+                            })
+                            $(document).ready(function(){
+                                $('.frame21').click(function(){
+                                    $('#popup-container').show()
+                                    $('.video21').show()
+                                })
+                                $('#close').click(function(){
+                                    $('#popup-container').hide()
+                                    $('.video21').hide()
+                                })
+                            })
+                            $(document).ready(function(){
+                                $('.frame31').click(function(){
+                                    $('#popup-container').show()
+                                    $('.video31').show()
+                                })
+                                $('#close').click(function(){
+                                    $('#popup-container').hide()
+                                    $('.video31').hide()
+                                })
+                            })
+                            $(document).ready(function(){
+                                $('.frame41').click(function(){
+                                    $('#popup-container').show()
+                                    $('.video41').show()
+                                })
+                                $('#close').click(function(){
+                                    $('#popup-container').hide()
+                                    $('.video41').hide()
+                                })
+                            })
+                            $(document).ready(function(){
+                                $('.frame12').click(function(){
+                                    $('#popup-container').show()
+                                    $('.video12').show()
+                                })
+                                $('#close').click(function(){
+                                    $('#popup-container').hide()
+                                    $('.video12').hide()
+                                })
+                            })
+                            $(document).ready(function(){
+                                $('.frame22').click(function(){
+                                    $('#popup-container').show()
+                                    $('.video22').show()
+                                })
+                                $('#close').click(function(){
+                                    $('#popup-container').hide()
+                                    $('.video22').hide()
+                                })
+                            })
+                            $(document).ready(function(){
+                                $('.frame32').click(function(){
+                                    $('#popup-container').show()
+                                    $('.video32').show()
+                                })
+                                $('#close').click(function(){
+                                    $('#popup-container').hide()
+                                    $('.video32').hide()
+                                })
+                            })
+                            $(document).ready(function(){
+                                $('.frame42').click(function(){
+                                    $('#popup-container').show()
+                                    $('.video42').show()
+                                })
+                                $('#close').click(function(){
+                                    $('#popup-container').hide()
+                                    $('.video42').hide()
+                                })
+                            })
+                            $(document).ready(function(){
+                                $('.frame13').click(function(){
+                                    $('#popup-container').show()
+                                    $('.video13').show()
+                                })
+                                $('#close').click(function(){
+                                    $('#popup-container').hide()
+                                    $('.video13').hide()
+                                })
+                            })
+                            $(document).ready(function(){
+                                $('.frame23').click(function(){
+                                    $('#popup-container').show()
+                                    $('.video23').show()
+                                })
+                                $('#close').click(function(){
+                                    $('#popup-container').hide()
+                                    $('.video23').hide()
+                                })
+                            })
+                            $(document).ready(function(){
+                                $('.frame33').click(function(){
+                                    $('#popup-container').show()
+                                    $('.video331').show()
+                                })
+                                $('#close').click(function(){
+                                    $('#popup-container').hide()
+                                    $('.video331').hide()
+                                })
+                            })
+                            $(document).ready(function(){
+                                $('.frame43').click(function(){
+                                    $('#popup-container').show()
+                                    $('.video43').show()
+                                })
+                                $('#close').click(function(){
+                                    $('#popup-container').hide()
+                                    $('.video43').hide()
+                                })
+                            })
+                            $(document).ready(function(){
+                                $('.frame14').click(function(){
+                                    $('#popup-container').show()
+                                    $('.video14').show()
+                                })
+                                $('#close').click(function(){
+                                    $('#popup-container').hide()
+                                    $('.video14').hide()
+                                })
+                            })
+                            $(document).ready(function(){
+                                $('.frame24').click(function(){
+                                    $('#popup-container').show()
+                                    $('.video24').show()
+                                })
+                                $('#close').click(function(){
+                                    $('#popup-container').hide()
+                                    $('.video24').hide()
+                                })
+                            })
+                            $(document).ready(function(){
+                                $('.frame34').click(function(){
+                                    $('#popup-container').show()
+                                    $('.video34').show()
+                                })
+                                $('#close').click(function(){
+                                    $('#popup-container').hide()
+                                    $('.video34').hide()
+                                })
+                            })
+                            $(document).ready(function(){
+                                $('.frame44').click(function(){
+                                    $('#popup-container').show()
+                                    $('.video44').show()
+                                })
+                                $('#close').click(function(){
+                                    $('#popup-container').hide()
+                                    $('.video44').hide()
+                                })
+                            })
+                            $(document).ready(function(){
+                                $('.frame15').click(function(){
+                                    $('#popup-container').show()
+                                    $('.video15').show()
+                                })
+                                $('#close').click(function(){
+                                    $('#popup-container').hide()
+                                    $('.video15').hide()
+                                })
+                            })
+                            $(document).ready(function(){
+                                $('.frame25').click(function(){
+                                    $('#popup-container').show()
+                                    $('.video25').show()
+                                })
+                                $('#close').click(function(){
+                                    $('#popup-container').hide()
+                                    $('.video25').hide()
+                                })
+                            })
+                            $(document).ready(function(){
+                                $('.frame35').click(function(){
+                                    $('#popup-container').show()
+                                    $('.video35').show()
+                                })
+                                $('#close').click(function(){
+                                    $('#popup-container').hide()
+                                    $('.video35').hide()
+                                })
+                            })
+                            $(document).ready(function(){
+                                $('.frame45').click(function(){
+                                    $('#popup-container').show()
+                                    $('.video45').show()
+                                })
+                                $('#close').click(function(){
+                                    $('#popup-container').hide()
+                                    $('.video45').hide()
+                                })
+                            })
+                        </script>
+
+            <div id="menu-1">
+                <center>
+                <table border="0" align="center">
+                <tr>
+                    <td><a class="frame11" href="#wrapper"><img align="left" class="idbuka" src="https://raw.githubusercontent.com/mgi301/Site/main/mqdefault_2.webp" width="300px"></img></a></td>
+                    <td><a class="frame21" href="#wrapper"><img class="idbuka" src="https://raw.githubusercontent.com/mgi301/Site/main/mqdefault_6s.webp" width="300px"></img></a></td>
+                </tr>
+                <tr>
+                    <td><p class="jdl">BÖ & Serhat Durmus- Elimi Tut (MGI Edit) (Lyrics)</p></td>
+                    <td><p class="jdl">Teriyaki Boyz- Tokyo Drift (CallmeArco Remix)[Slowed] | Car Music [4K]</p></td>
+                </tr>
+                <tr>
+                    <Td><a class="frame31" href="#wrapper"><img class="idbuka" src="https://raw.githubusercontent.com/mgi301/Site/main/31.webp" width="300px"></img></a></td>
+                    <Td><a class="frame41" href="#wrapper"><img class="idbuka" src="https://raw.githubusercontent.com/mgi301/Site/main/41.webp" width="300px"></img></a></Td>
+                </tr>
+                <tr>
+                    <td><p class="jdl">Skan- Never Gonna Catch Me (MGI Edit)(Lyrics) | NONSTOP BASS!</p></td>
+                    <td><p class="jdl">Alan Walker Ft. ISÁK - Sorry (Rearranged)[HQ]</p></td>
+                </tr>
+                </center>
+                </table>
+            </div>
+
+            <div id="menu-2">
+                <center>
+                <table border="0" align="center">
+                <tr>
+                    <td><a class="frame12" href="#wrapper"><img class="idbuka" src="https://raw.githubusercontent.com/mgi301/Site/main/12.webp" width="300px"></img></a></td>
+                    <td><a class="frame22" href="#wrapper"><img class="idbuka" src="https://raw.githubusercontent.com/mgi301/Site/main/22.webp" width="300px"></img></a></td>
+                </tr>
+                <tr>
+                    <td><p class="jdl">BLESSED MANE- NO SLEEP (Perfect Loop) #Shorts</p></td>
+                    <td><p class="jdl">BIGGEST FAKE JBL XTREME FLEX, Ever!!! | CHILL BASS #Shorts</p></td>
+                </tr>
+                <tr>
+                    <Td><a class="frame32" href="#wrapper"><img class="idbuka" src="https://raw.githubusercontent.com/mgi301/Site/main/32.webp" width="300px"></img></a></td>
+                    <Td><a class="frame42" href="#wrapper"><img class="idbuka" src="https://raw.githubusercontent.com/mgi301/Site/main/42.webp" width="300px"></img></a></Td>
+                </tr>
+                <tr>
+                    <td><p class="jdl">JBL FLIP 5 With JBL XTREME AMP Free Air BASS TEST!!! #Short</p></td>
+                    <td><p class="jdl">JBL XTREME | Morning Mood BASS TEST~ #Shorts</p></td>
+                </tr>
+                </center>
+                </table>
+            </div>
+
+            <div id="menu-3">
+                <center>
+                <table border="0" align="center">
+                <tr>
+                    <td><a class="frame13" href="#wrapper"><img class="idbuka" src="https://raw.githubusercontent.com/mgi301/Site/main/13.webp" width="300px"></img></a></td>
+                    <td><a class="frame23" href="#wrapper"><img class="idbuka" src="https://raw.githubusercontent.com/mgi301/Site/main/23.webp" width="300px"></img></a></td>
+                </tr>
+                <tr>
+                    <td><p class="jdl">JBL XTREME | Morning Mood BASS TEST~ #Shorts</p></td>
+                    <td><p class="jdl">Trap Woofer- 30K Bass Test!!! (45-60Hz) | JBL Charge 4</p></td>
+                </tr>
+                <tr>
+                    <Td><a class="frame33" href="#wrapper"><img class="idbuka" src="https://raw.githubusercontent.com/mgi301/Site/main/33.webp" width="300px"></img></a></td>
+                    <Td><a class="frame43" href="#wrapper"><img class="idbuka" src="https://raw.githubusercontent.com/mgi301/Site/main/43.webp" width="300px"></img></a></Td>
+                </tr>
+                <tr>
+                    <td><p class="jdl">Wizard- All My Friends (Bass Test) | JBL Charge 5</p></td>
+                    <td><p class="jdl">Night Lovell- Off Air (REBASS 30Hz) | JBL XTREME 2</p></td>
+                </tr>
+                </center>
+                </table>
+            </div>
+
+            <div id="menu-4">
+                <center>
+                <table border="0" align="center">
+                <tr>
+                    <td><a class="frame14" href="#wrapper"><img class="idbuka" src="https://raw.githubusercontent.com/mgi301/Site/main/14.webp" width="300px"></img></a></td>
+                    <td><a class="frame24" href="#wrapper"><img class="idbuka" src="https://raw.githubusercontent.com/mgi301/Site/main/24.webp" width="300px"></img></a></td>
+                </tr>
+                <tr>
+                    <td><p class="jdl">Future- Mask Off (10Minutes MIX)|CAR VIDEO</p></td>
+                    <td><p class="jdl">K-391- Aurora (MIX)(Lyrics)[Bass Boosted][4K]</p></td>
+                </tr>
+                <tr>
+                    <Td><a class="frame34" href="#wrapper"><img class="idbuka" src="https://raw.githubusercontent.com/mgi301/Site/main/34.webp" width="300px"></img></a></td>
+                    <Td><a class="frame44" href="#wrapper"><img class="idbuka" src="https://raw.githubusercontent.com/mgi301/Site/main/44.webp" width="300px"></img></a></Td>
+                </tr>
+                <tr>
+                    <td><p class="jdl">Headphone Activist - Cloud City (Extended) [32Hz REBASS][4K]</p></td>
+                    <td><p class="jdl">Serhat Durmus - Everything [Bass Boosted]</p></td>
+                </tr>
+                </center>
+                </table>
+            </div>
+
+            <div id="menu-5">
+                <center>
+                <table border="0" align="center">
+                <tr>
+                    <td><a class="frame15" href="#wrapper"><img class="idbuka" src="https://raw.githubusercontent.com/mgi301/Site/main/15.webp" width="300px"></img></a></td>
+                    <td><a class="frame25" href="#wrapper"><img class="idbuka" src="https://raw.githubusercontent.com/mgi301/Site/main/25.webp" width="300px"></img></a></td>
+                </tr>
+                <tr>
+                    <td><p class="jdl">NOES & Serhat Durmus - Imagine (Lyrics)[Extended]</p></td>
+                    <td><p class="jdl">Exyl - PING! (Extended)</p></td>
+                </tr>
+                <tr>
+                    <Td><a class="frame35" href="#wrapper"><img class="idbuka" src="https://raw.githubusercontent.com/mgi301/Site/main/35.webp" width="300px"></img></a></td>
+                    <Td><a class="frame45" href="#wrapper"><img class="idbuka" src="https://raw.githubusercontent.com/mgi301/Site/main/45.webp" width="300px"></img></a></Td>
+                </tr>
+                <tr>
+                    <td><p class="jdl">Alan Walker - Alone (Oasis Trap REMIX) (extended) [Extreme Bass Boosted]</p></td>
+                    <td><p class="jdl">Carol of the Bells (D.Mave Trap Remix)[Extended Beat]</p></td>
+                </tr>
+                </center>
+                </table>
+            </div>
+
+    </div>
+
+
+            
+            <div id="about">
+                
+                
+
+                </div>
+                
+            </div>
+        </div>
+        <div id="middle">
+            <div id="socials">
+            <div id="middletype">
+                <h1>Socials and Contact</h1>
+            </div>
+            <a href="https://www.instagram.com/ahmad_mishbahuddin/" target="_blank">
+            <div id="contactpic">
+                <img class="getintouchsize" src="https://raw.githubusercontent.com/mgi301/Site/main/instagram.png" alt="ig"><div class="contactfont">
+                @mgi</div></div></a>
+            <a href="https://www.facebook.com/MishbahGI/" target="blank">
+            <div id="contactpic">
+                <img class="getintouchsize" src="https://raw.githubusercontent.com/mgi301/Site/main/facebook.png" alt="fb"><div class="contactfont">
+                @mgi301</div></div></a>
+            <a href="https://api.whatsapp.com/send/?phone=6283848052406" target="_blank">
+            <div id="contactpic">
+                <img class="getintouchsize" src="https://raw.githubusercontent.com/mgi301/Site/main/wa.png" alt="whatsapp"><div class="contactfont">
+            083848052406</div></div></a>
+            <a href="https://gmail.com" target="_blank">
+            <div id="contactpic">
+                <img class="getintouchsize" src="https://i1.wp.com/www.point-star.com/wp-content/uploads/2020/09/logo-gmail-png-gmail-icon-download-png-and-vector-1.png" alt="gmail"><div class="contactfont">
+            mgibussiness301@gmail.com</div></div></a>
+
+
+
+
+
+               
+           </div>
+
+               
+              
+                
+                <div id="partner">
+                    <div class="partner">
+                    <h1>Become Our Partner Now!</h1></div>
+                    <script>
+                        RGB=document.getElementsByClassName('partner');
+                        setInterval(function(){
+                        RGB[0].style.color = 'white';
+                        RGB[1].style.color = 'red';
+                        
+
+                        setTimeout(function(){
+                        RGB[0].style.color = 'red';
+                        RGB[1].style.color = 'white';
+                        
+                        },500);
+                        },1000);
+                    </script>
+                    <div class="partner">
+                    <h3>Only 1 Minute to sign! <br></h3></div>
+                    <img class="formbox" width="200px" src="https://raw.githubusercontent.com/mgi301/Site/main/partner.png" alt="partner">
+                    
+                    <script>
+                        function danger(){
+                        let nomor = (document.formtest.iname.value);
+                        if (nomor==""){
+                            document.getElementById('namefokus').style.background='red';
+                        }}
+                        function danger2(){
+                            let name=(document.formtest.imail.value);
+                            if (name==""){
+                                document.getElementById('emailfokus').style.background='red';
+                            }
+                        }
+                        function danger3(){
+                            let oper=(document.formtest.ioffer.value);
+                            if (oper==""){
+                                document.getElementById('offerfokus').style.background='red';
+                            }
+                        }
+                        function pokus(){
+                            document.getElementById('namefokus').style.background='azure';
+                        }
+                        function pokus2(){
+                            document.getElementById('emailfokus').style.background='azure';
+                        }
+                        function pokus3(){
+                            document.getElementById('offerfokus').style.background='azure';
+                        }
+                        function tq(){
+                            if((document.formtest.iname.value!="")&&(document.formtest.imail.value!="")&&(document.formtest.ioffer.value!="")){
+                                alert('Thanks for the offer!')
+                            }
+                            else{
+                                alert('Please Fill Everything! Thanks!')
+                            }}
+                    </script>                      
+                    
+                    <form name="formtest">
+                        <input type="text" placeholder="Name" name="iname" id="namefokus" onfocus="pokus()" onblur="danger()"> <br>
+                        <input type="text" placeholder="Email" name="imail" id="emailfokus" onfocus="pokus2()" onblur="danger2()"> <br>
+                        <textarea cols="30" rows="5" placeholder="Tell me your offer!" name="ioffer" id="offerfokus" onfocus="pokus3()" onblur="danger3()"></textarea> <br>
+                        <input type="button" value="Send" onclick="tq()">
+                    </form>
+                </div>
+        </div>
+        <div id="footer">©Kelompok<br>
+            2021
+        </div>
+    </body>
+</html>
